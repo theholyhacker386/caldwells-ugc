@@ -188,6 +188,14 @@
   .contact .btn:hover{filter:brightness(1.05)}
   .contact .socials{margin-top:26px;display:flex;gap:24px;justify-content:center;color:rgba(255,255,255,.9);font-size:.95rem}
   .contact .socials a:hover{color:var(--gold)}
+  .contact-emails{display:flex;flex-direction:column;gap:10px;max-width:430px;margin:0 auto 8px}
+  .contact-emails a{
+    display:block;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.35);
+    color:#fff;border-radius:100px;padding:12px 20px;font-size:.95rem;font-weight:500;
+    transition:background .2s ease,transform .15s ease;
+  }
+  .contact-emails a:hover{background:rgba(255,255,255,.28);transform:translateY(-2px)}
+  .contact-emails a span{opacity:.85;font-weight:400}
 
   footer{text-align:center;padding:40px 24px;color:var(--muted);font-size:.85rem}
   footer .logo{font-size:1.05rem;margin-bottom:6px}
@@ -349,11 +357,14 @@
   <div class="contact">
     <div class="eyebrow" style="color:var(--gold)">Let's create together</div>
     <h2>Ready to make content that <em>feels like home?</em></h2>
-    <p>Tell me about your brand and what you're launching — I'd love to bring it to life in a way your audience actually trusts.</p>
-    <a href="mailto:YOUR-EMAIL@gmail.com?subject=UGC%20Collaboration" class="btn">Email me</a>
+    <p>Tell us about your brand and what you're launching — we'd love to bring it to life in a way your audience actually trusts. Reach the right one of us:</p>
+    <div class="contact-emails">
+      <a href="mailto:jen@thecaldwellcreatives.com?subject=UGC%20Collaboration">👩 Women's &amp; beauty brands <span>— jen@thecaldwellcreatives.com</span></a>
+      <a href="mailto:colby@thecaldwellcreatives.com?subject=UGC%20Collaboration">👨 Men's &amp; gear brands <span>— colby@thecaldwellcreatives.com</span></a>
+      <a href="mailto:fam@thecaldwellcreatives.com?subject=UGC%20Collaboration">👨‍👩‍👧‍👦 Family &amp; kids brands <span>— fam@thecaldwellcreatives.com</span></a>
+    </div>
     <div class="socials">
-      <a href="#">📸 Instagram: @yourhandle</a>
-      <a href="mailto:YOUR-EMAIL@gmail.com">✉️ YOUR-EMAIL@gmail.com</a>
+      <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener">📸 @heycaldwells</a>
     </div>
   </div>
 </section>
