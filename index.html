@@ -10,18 +10,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FFF7FC;
-    --cream-2:#FBEAF6;
-    --card:#FFFFFF;
-    --ink:#2A1E3F;
-    --muted:#7E7092;
-    --clay:#FF2E88;        /* hot pink primary */
-    --clay-dark:#E01573;
-    --sage:#12C2C2;        /* aqua pop */
-    --purple:#8B2FE0;      /* electric purple */
-    --gold:#FFC61A;        /* sunshine yellow */
-    --line:#F1DDEC;
-    --grad:linear-gradient(120deg,#FF2E88 0%,#8B2FE0 100%);
+    --cream:#FBF7F1;       /* warm ivory background */
+    --cream-2:#F2E9DD;     /* warm sand alt sections */
+    --card:#FFFDFA;
+    --ink:#2B2420;         /* warm espresso text */
+    --muted:#8B8178;       /* warm stone gray */
+    --clay:#CF6B4E;        /* terracotta coral accent */
+    --clay-dark:#B85639;
+    --sage:#7E9A85;        /* muted sage green pop */
+    --purple:#A6604F;      /* warm secondary */
+    --gold:#E3A94B;        /* muted honey */
+    --line:#E8DDCF;        /* warm hairline */
+    --grad:linear-gradient(120deg,#D77354 0%,#B4586A 100%);
     --serif:'Fraunces', Georgia, 'Times New Roman', serif;
     --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
@@ -76,7 +76,7 @@
   .portrait{
     position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;
     max-width:300px;width:100%;justify-self:center;
-    background:linear-gradient(150deg,#FFD9EC 0%,#E7D3FF 55%,#CFF6F6 100%);
+    background:linear-gradient(150deg,#EFE3D4 0%,#E7D3C4 55%,#DCC9BC 100%);
     border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
     box-shadow:0 30px 60px -26px rgba(139,47,224,.4);
   }
@@ -96,9 +96,9 @@
   .reels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
   .reel{
     position:relative;aspect-ratio:1/1;border-radius:0;overflow:hidden;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;background:#e9e2ee;
+    display:flex;align-items:center;justify-content:center;background:#e6dccd;
   }
-  .reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform .5s ease}
   .reel:hover video,.reel:hover img{transform:scale(1.05)}
   .reel .play{
     position:relative;z-index:2;width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;
@@ -136,7 +136,7 @@
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
   .about-photo{
-    aspect-ratio:1/1;border-radius:22px;background:linear-gradient(150deg,#CFF6F6 0%,#FFE0B3 50%,#FFD9EC 100%);
+    aspect-ratio:1/1;border-radius:22px;background:linear-gradient(150deg,#EFE3D4 0%,#E7D3C4 50%,#DCC9BC 100%);
     border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
     color:var(--muted);text-align:center;overflow:hidden;
   }
