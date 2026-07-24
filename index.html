@@ -112,7 +112,18 @@
     box-shadow:0 10px 26px -8px rgba(0,0,0,.35);transition:transform .18s ease;
   }
   .reel:hover .play{transform:scale(1.08)}
-  .reel.playing .play{opacity:0;pointer-events:none}
+  /* dark scrim so the title stays readable over any video */
+  .reel.has-title::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,0,0,.10) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.42) 100%);
+    transition:opacity .25s ease;}
+  .reel-title{
+    position:absolute;z-index:2;left:0;right:0;bottom:16px;padding:0 12px;text-align:center;
+    font-family:var(--serif);font-weight:600;text-transform:uppercase;color:#fff;
+    font-size:clamp(1.25rem,4.6vw,1.85rem);line-height:1.02;letter-spacing:.005em;
+    text-shadow:0 3px 18px rgba(0,0,0,.55);pointer-events:none;transition:opacity .2s ease;
+  }
+  .reel.playing .play,.reel.playing .reel-title{opacity:0;pointer-events:none}
+  .reel.playing.has-title::after{opacity:0}
   .reel .play::after{
     content:'';margin-left:5px;border-style:solid;border-width:12px 0 12px 20px;
     border-color:transparent transparent transparent var(--clay);
@@ -241,20 +252,24 @@
 <section id="work" style="padding:0 0 20px">
   <div class="wrap">
     <div class="reels">
-      <div class="reel">
+      <div class="reel has-title">
         <video src="assets/reel-1.mp4" poster="assets/reel-1-poster.jpg" playsinline preload="metadata"></video>
+        <span class="reel-title">Family<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
-      <div class="reel">
+      <div class="reel has-title">
         <video src="assets/reel-2.mp4" poster="assets/reel-2-poster.jpg" playsinline preload="metadata"></video>
+        <span class="reel-title">Kids<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
-      <div class="reel">
+      <div class="reel has-title">
         <video src="assets/reel-3.mp4" poster="assets/reel-3-poster.jpg" playsinline preload="metadata"></video>
+        <span class="reel-title">Toy<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
-      <div class="reel">
+      <div class="reel has-title">
         <video src="assets/reel-4.mp4" poster="assets/reel-4-poster.jpg" playsinline preload="metadata"></video>
+        <span class="reel-title">Lifestyle<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
     </div>
