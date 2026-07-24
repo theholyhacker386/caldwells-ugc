@@ -95,7 +95,7 @@
   /* ---------- REELS ROW ---------- */
   .reels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
   .reel{
-    position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;cursor:pointer;
+    position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;cursor:pointer;
     border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
     box-shadow:0 22px 44px -26px rgba(139,47,224,.45);transition:transform .2s ease,box-shadow .2s ease;
   }
@@ -254,12 +254,12 @@
     <div class="reels">
       <div class="reel has-title">
         <video src="assets/reel-1.mp4" poster="assets/reel-1-poster.jpg" playsinline preload="metadata"></video>
-        <span class="reel-title">Family<br>UGC</span>
+        <span class="reel-title">Fitness<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
       <div class="reel has-title">
         <video src="assets/reel-2.mp4" poster="assets/reel-2-poster.jpg" playsinline preload="metadata"></video>
-        <span class="reel-title">Kids<br>UGC</span>
+        <span class="reel-title">Caf&eacute;<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
       <div class="reel has-title">
@@ -269,7 +269,7 @@
       </div>
       <div class="reel has-title">
         <video src="assets/reel-4.mp4" poster="assets/reel-4-poster.jpg" playsinline preload="metadata"></video>
-        <span class="reel-title">Lifestyle<br>UGC</span>
+        <span class="reel-title">Protein<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
     </div>
