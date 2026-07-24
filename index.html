@@ -69,7 +69,7 @@
   /* ---------- HERO ---------- */
   .hero{padding:74px 0 60px}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(2.4rem,5.4vw,4rem);margin-bottom:22px}
+  .hero h1{font-size:clamp(2.7rem,6.2vw,4.6rem);font-weight:600;line-height:1.04;margin-bottom:22px}
   .hero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:34ch;margin-bottom:0}
   /* headshot */
@@ -114,10 +114,10 @@
   .reel:hover .play{transform:scale(1.08)}
   /* dark scrim so the title stays readable over any video */
   .reel.has-title::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-    background:linear-gradient(180deg,rgba(0,0,0,.10) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,.42) 100%);
+    background:linear-gradient(180deg,rgba(0,0,0,.48) 0%,rgba(0,0,0,0) 42%,rgba(0,0,0,.06) 100%);
     transition:opacity .25s ease;}
   .reel-title{
-    position:absolute;z-index:2;left:0;right:0;bottom:16px;padding:0 12px;text-align:center;
+    position:absolute;z-index:2;left:0;right:0;top:15px;padding:0 12px;text-align:center;
     font-family:var(--serif);font-weight:600;text-transform:uppercase;color:#fff;
     font-size:clamp(1.25rem,4.6vw,1.85rem);line-height:1.02;letter-spacing:.005em;
     text-shadow:0 3px 18px rgba(0,0,0,.55);pointer-events:none;transition:opacity .2s ease;
@@ -239,7 +239,7 @@
   <div class="wrap hero-grid">
     <div>
         <h1>Real life. Real content that <em>actually converts.</em></h1>
-      <p class="lead">I create authentic, scroll-stopping videos and photos that make your brand feel like a trusted friend's recommendation — because that's exactly what it is.</p>
+      <p class="lead">We create authentic, scroll-stopping videos and photos that make your brand feel like a trusted friend's recommendation — because that's exactly what it is.</p>
     </div>
     <div class="portrait">
       <img src="assets/family.jpg" alt="The Caldwell family at the beach">
