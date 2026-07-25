@@ -130,9 +130,9 @@
   .brandbar{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px}
   .brandbar .inner{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 34px;text-align:center}
   .brandbar .lbl{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .brandbar .names{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 28px}
-  .brandbar .names b{font-family:var(--serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ink);font-weight:500}
-  .brandbar .sep{color:var(--clay);font-size:.9rem}
+  .brandbar .names{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 16px}
+  .brandbar .logo-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 22px;height:66px;display:flex;align-items:center;justify-content:center}
+  .brandbar .logo-card img{max-height:40px;max-width:150px;width:auto;object-fit:contain;display:block}
   @media(max-width:600px){.brandbar .inner{flex-direction:column;gap:10px}}
 
   /* ---------- HOW IT WORKS ---------- */
@@ -324,11 +324,9 @@
   <div class="inner">
     <span class="lbl">Brands we've created content for</span>
     <span class="names">
-      <b>Terra by Battat</b>
-      <span class="sep">✦</span>
-      <b>The Porch · Daytona Beach</b>
-      <span class="sep">✦</span>
-      <b>Zevia</b>
+      <span class="logo-card"><img src="assets/logo-terra.png" alt="Terra by Battat"></span>
+      <span class="logo-card"><img src="assets/logo-porch.png" alt="The Porch Coffee Bar"></span>
+      <span class="logo-card"><img src="assets/logo-zevia.png" alt="Zevia"></span>
     </span>
   </div>
 </div>
