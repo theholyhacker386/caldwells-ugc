@@ -126,6 +126,15 @@
   @media(max-width:820px){.reels{grid-template-columns:1fr 1fr;gap:8px}}
   @media(max-width:480px){.reels{grid-template-columns:1fr 1fr;gap:12px}.reel .play{width:48px;height:48px}}
 
+  /* ---------- BRAND STRIP ---------- */
+  .brandbar{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px}
+  .brandbar .inner{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 34px;text-align:center}
+  .brandbar .lbl{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .brandbar .names{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 28px}
+  .brandbar .names b{font-family:var(--serif);font-size:clamp(1.15rem,2.5vw,1.55rem);color:var(--ink);font-weight:500}
+  .brandbar .sep{color:var(--clay);font-size:.9rem}
+  @media(max-width:600px){.brandbar .inner{flex-direction:column;gap:10px}}
+
   /* ---------- HOW IT WORKS ---------- */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 24px}
@@ -310,6 +319,20 @@
   </div>
 </section>
 
+<!-- BRAND STRIP -->
+<div class="brandbar">
+  <div class="inner">
+    <span class="lbl">Brands we've created content for</span>
+    <span class="names">
+      <b>Terra by Battat</b>
+      <span class="sep">✦</span>
+      <b>The Porch · Daytona Beach</b>
+      <span class="sep">✦</span>
+      <b>Zevia</b>
+    </span>
+  </div>
+</div>
+
 <!-- ABOUT -->
 <section id="about">
   <div class="wrap about-grid">
@@ -454,21 +477,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- BRANDS WE'VE CREATED FOR -->
-<section class="alt">
-  <div class="wrap">
-    <div class="sec-head" style="margin:0 auto 34px;text-align:center">
-      <div class="eyebrow">Proof</div>
-      <h2>Brands we've created content for</h2>
-    </div>
-    <div class="brand-list">
-      <span class="brand-pill">Terra by Battat</span>
-      <span class="brand-pill">The Porch · Daytona Beach</span>
-    </div>
-    <p style="text-align:center;color:var(--muted);max-width:48ch;margin:26px auto 0;font-size:.95rem">Your brand could be next. 🤍</p>
   </div>
 </section>
 
