@@ -226,7 +226,7 @@
   @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:32px}}
 
   /* ---------- NICHES / PILLARS ---------- */
-  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:20px}
   .pillar{
     background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 22px;
     transition:transform .2s ease,box-shadow .2s ease;
@@ -356,8 +356,8 @@
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
       <div class="reel has-title">
-        <video src="assets/reel-3.mp4" poster="assets/reel-3-poster.jpg" playsinline preload="metadata"></video>
-        <span class="reel-title">Toy<br>UGC</span>
+        <video src="assets/reel-6.mp4" poster="assets/reel-6-poster.jpg" playsinline preload="metadata"></video>
+        <span class="reel-title">Outdoor<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
       <div class="reel has-title">
@@ -368,6 +368,11 @@
       <div class="reel has-title">
         <video src="assets/reel-4.mp4" poster="assets/reel-4-poster.jpg" playsinline preload="metadata"></video>
         <span class="reel-title">Protein<br>UGC</span>
+        <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
+      </div>
+      <div class="reel has-title">
+        <video src="assets/reel-3.mp4" poster="assets/reel-3-poster.jpg" playsinline preload="metadata"></video>
+        <span class="reel-title">Toy<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
     </div>
@@ -416,6 +421,7 @@
       <div class="pillar"><h3>Faith &amp; family</h3><p>Prayer, God stories, and Jesus-first living — our heartbeat and the center of everything.</p></div>
       <div class="pillar"><h3>Resourceful living</h3><p>Airbnb house-hacking, camper life, thrifting, and doing so much more with less.</p></div>
       <div class="pillar"><h3>Homeschool &amp; mom life</h3><p>Real, unfiltered days raising and teaching four kids — the joyful and the messy.</p></div>
+      <div class="pillar"><h3>Outdoor &amp; adventure</h3><p>Fishing, hunting, camping, and RV travel — we love the outdoors and adventures on the road.</p></div>
       <div class="pillar"><h3>Health &amp; self-care</h3><p>Simple wellness and taking care of ourselves so we can pour into our family.</p></div>
     </div>
   </div>
