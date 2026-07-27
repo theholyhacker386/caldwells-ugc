@@ -52,8 +52,18 @@
 
   /* BODY GRID */
   .cgrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:start;padding:72px 0}
-  .cgrid .photo{aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(43,36,32,.35);margin-bottom:26px}
+  .cgrid .photo{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(43,36,32,.35);margin-bottom:26px}
   .cgrid .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-caption{
+    position:absolute;left:0;right:0;bottom:0;padding:54px 20px 20px;text-align:center;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.62));color:#fff;
+    font-family:var(--serif);font-style:italic;font-weight:700;font-size:1.55rem;line-height:1.15;
+    text-shadow:0 2px 14px rgba(0,0,0,.5);
+  }
+  .photo-caption .small{
+    display:block;font-family:var(--sans);font-style:normal;font-weight:600;font-size:.68rem;
+    letter-spacing:.2em;text-transform:uppercase;opacity:.85;margin-bottom:6px;
+  }
   .cinfo h2{font-size:1.7rem;margin-bottom:12px}
   .cinfo p{color:var(--muted);margin-bottom:20px}
   .cmethods{display:flex;flex-direction:column;gap:10px}
@@ -119,6 +129,10 @@
 <!-- BODY -->
 <section class="wrap cgrid">
   <div class="cinfo">
+    <div class="photo">
+      <img src="assets/family-glam.jpg" alt="Jen and Colby back to back, dressed up">
+      <div class="photo-caption"><span class="small">The Caldwell Creatives</span>Let's get creative.</div>
+    </div>
     <h2>Say hello</h2>
     <p>Two easy ways to reach us — <strong>book a quick call</strong>, or fill out the form. Whatever's easiest for you.</p>
     <a href="mailto:hey@thecaldwellcreatives.com?subject=I'd%20like%20to%20book%20a%20call" class="btn" style="margin:2px 0 18px">Book a 15-min call</a>
@@ -126,7 +140,6 @@
       <a href="mailto:hey@thecaldwellcreatives.com">hey@thecaldwellcreatives.com</a>
       <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener">@heycaldwells</a>
     </div>
-    <div class="photo" style="margin:26px 0 0"><img src="assets/family-80s.jpg" alt="Jen and Colby in 80s workout gear"></div>
   </div>
 
   <div class="cform" id="cform">
@@ -159,7 +172,6 @@
       <div class="big">Thank you!</div>
       <p>Your message is on its way to us — we'll be in touch soon. In the meantime, come say hi on <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener" style="color:var(--clay);font-weight:600">Instagram</a>!</p>
     </div>
-    <div class="photo" style="margin:26px 0 0"><img src="assets/family-glam.jpg" alt="Jen and Colby back to back, dressed up"></div>
   </div>
 </section>
 
