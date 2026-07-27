@@ -155,7 +155,10 @@
   @media(max-width:820px){.steps{grid-template-columns:1fr}}
 
   /* ---------- PACKAGES ---------- */
-  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  .plans{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:stretch}
+  .plan.wide{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+  .plan.wide .btn{margin-top:0;width:auto;flex-shrink:0}
+  .plan.wide p{color:var(--muted);font-size:.95rem;max-width:56ch;margin:0}
   .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 26px;display:flex;flex-direction:column}
   .plan.featured{border-color:var(--clay);border-width:1.5px}
   .plan .tag{align-self:flex-start;background:var(--clay);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px}
@@ -415,48 +418,65 @@
   <div class="wrap">
     <div class="sec-head" style="margin:0 auto 44px;text-align:center">
       <div class="eyebrow">Ways to work together</div>
-      <h2>Packages</h2>
+      <h2>Services &amp; Packages</h2>
       <p style="margin:0 auto">Every brand is different, so pricing is custom — book a quick call and we'll build the right fit for you.</p>
     </div>
     <div class="plans">
-      <div class="plan">
-        <div class="tag">Starter</div>
-        <h3>Single UGC Video</h3>
-        <div class="price">Perfect for testing the waters</div>
+      <div class="plan featured">
+        <div class="tag">Most popular</div>
+        <h3>UGC Content — Brand-Owned</h3>
+        <div class="price">Content created for your brand's organic or paid use</div>
         <ul>
-          <li>1 authentic UGC video (up to 30s)</li>
-          <li>Vertical 9:16, ready to post</li>
-          <li>Hook + captions included</li>
-          <li>1 round of revisions</li>
+          <li>Single videos or 3-video bundles</li>
+          <li>Vertical 9:16 with hook + captions, ready to post</li>
+          <li>Hook &amp; CTA variations for A/B testing</li>
+          <li>Raw footage add-ons available</li>
           <li>Full usage rights to keep</li>
         </ul>
         <a href="contact.html" class="btn">Contact</a>
       </div>
-      <div class="plan featured">
-        <div class="tag">Most popular</div>
-        <h3>Content Bundle</h3>
-        <div class="price">Our most-loved package</div>
+      <div class="plan">
+        <div class="tag">Our audience</div>
+        <h3>Organic Posting — Our Platforms</h3>
+        <div class="price">We post it to our TikTok &amp; Instagram and stay in the comments</div>
         <ul>
-          <li>3 UGC videos (mix &amp; match)</li>
-          <li>Multiple hooks for A/B testing</li>
-          <li>Voiceover + captions</li>
-          <li>2 rounds of revisions</li>
-          <li>Raw + edited files, full rights</li>
+          <li>TikTok + Instagram posts — 1, 2, or 3-post packages</li>
+          <li>Instagram Stories</li>
+          <li>We engage with every comment</li>
+          <li>Authentic reach from a real family account</li>
         </ul>
         <a href="contact.html" class="btn">Contact</a>
       </div>
       <div class="plan">
-        <div class="tag">Best value</div>
-        <h3>Brand Ad Bundle</h3>
-        <div class="price">For a full campaign push</div>
+        <div class="tag">For paid ads</div>
+        <h3>Paid Usage &amp; Whitelisting</h3>
+        <div class="price">Run our content as ads — from your account or ours</div>
         <ul>
-          <li>4–5 UGC videos + lifestyle photos</li>
-          <li>Family &amp; couple angles</li>
-          <li>Priority turnaround</li>
-          <li>Extended ad &amp; whitelisting rights</li>
-          <li>Ongoing content option</li>
+          <li>30-day, 90-day, or 6-month usage terms</li>
+          <li>Ads from your brand account</li>
+          <li>Whitelisting from our handles</li>
+          <li>Extend or renew anytime</li>
         </ul>
         <a href="contact.html" class="btn">Contact</a>
+      </div>
+      <div class="plan">
+        <div class="tag">Quick boost</div>
+        <h3>Link in Bio</h3>
+        <div class="price">Your link, front and center on our profile</div>
+        <ul>
+          <li>24-hour, 72-hour, or 7-day placements</li>
+          <li>7-day + Story bundle available</li>
+          <li>Pairs perfectly with an organic post</li>
+        </ul>
+        <a href="contact.html" class="btn">Contact</a>
+      </div>
+      <div class="plan wide">
+        <div>
+          <div class="tag">Bundles &amp; partnerships</div>
+          <h3>Save when you bundle</h3>
+          <p>Combine services for bundle savings — and ask us about custom packages for long-term partnerships, paid ad campaigns, and multi-video projects.</p>
+        </div>
+        <a href="contact.html" class="btn">Build a custom package</a>
       </div>
     </div>
     <p style="text-align:center;color:var(--muted);max-width:52ch;margin:30px auto 0;font-size:.95rem">Not sure which fits? <a href="contact.html" style="color:var(--clay);font-weight:600">Tell us about your brand</a> and we'll point you the right way.</p>
