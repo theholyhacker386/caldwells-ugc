@@ -7,13 +7,13 @@
 <meta name="description" content="Faith-first mom of 4 creating authentic, scroll-stopping user-generated content that converts for brands." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#FBF7F1;       /* warm ivory background */
     --cream-2:#F2E9DD;     /* warm sand alt sections */
     --card:#FFFDFA;
-    --ink:#2B2420;         /* warm espresso text */
+    --ink:#1E1A17;         /* near-black for clean contrast */
     --muted:#8B8178;       /* warm stone gray */
     --clay:#CF6B4E;        /* terracotta coral accent */
     --clay-dark:#B85639;
@@ -22,7 +22,7 @@
     --gold:#E3A94B;        /* muted honey */
     --line:#E8DDCF;        /* warm hairline */
     --grad:linear-gradient(120deg,#D77354 0%,#B4586A 100%);
-    --serif:'Fraunces', Georgia, 'Times New Roman', serif;
+    --serif:'Archivo', 'Helvetica Neue', Arial, sans-serif;
     --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -35,7 +35,7 @@
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;letter-spacing:-0.01em}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;letter-spacing:-0.02em}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   .accent{color:var(--clay)}
@@ -46,9 +46,9 @@
   .btn{
     display:inline-block;background:var(--grad);color:#fff;font-weight:600;font-size:.95rem;
     padding:14px 28px;border-radius:100px;transition:transform .15s ease,filter .2s ease,box-shadow .2s ease;
-    border:none;cursor:pointer;box-shadow:0 10px 24px -10px rgba(255,46,136,.6);
+    border:none;cursor:pointer;
   }
-  .btn:hover{filter:brightness(1.06) saturate(1.1);transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(139,47,224,.55)}
+  .btn:hover{filter:brightness(1.04);transform:translateY(-2px)}
   .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
   .btn.ghost:hover{border-color:var(--clay);color:var(--clay);background:transparent}
 
@@ -69,7 +69,7 @@
   /* ---------- HERO ---------- */
   .hero{padding:74px 0 60px}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(2.7rem,6.2vw,4.6rem);font-weight:600;line-height:1.04;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.8rem,6.6vw,4.9rem);font-weight:800;line-height:1.0;margin-bottom:22px}
   .hero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:34ch;margin-bottom:0}
   /* headshot */
@@ -78,7 +78,7 @@
     max-width:300px;width:100%;justify-self:center;
     background:linear-gradient(150deg,#EFE3D4 0%,#E7D3C4 55%,#DCC9BC 100%);
     border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-    box-shadow:0 30px 60px -26px rgba(139,47,224,.4);
+    box-shadow:0 24px 50px -30px rgba(43,36,32,.3);
   }
   .portrait img{width:100%;height:100%;object-fit:cover;display:block}
   .badge{
@@ -147,7 +147,7 @@
   /* ---------- PACKAGES ---------- */
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
   .plan{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 26px;display:flex;flex-direction:column}
-  .plan.featured{border-color:var(--clay);box-shadow:0 26px 52px -30px rgba(207,107,78,.55)}
+  .plan.featured{border-color:var(--clay);border-width:1.5px}
   .plan .tag{align-self:flex-start;background:var(--clay);color:#fff;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px}
   .plan h3{font-size:1.35rem;margin-bottom:6px}
   .plan .price{color:var(--muted);font-size:.9rem;margin-bottom:18px}
@@ -343,7 +343,7 @@
     </div>
     <div class="about-body">
       <div class="eyebrow">Get to know us</div>
-      <h2>Hi, we're the Caldwells 🌞🦞</h2>
+      <h2>Hi, we're the Caldwells</h2>
       <p>We're a <strong>faith-first, homeschooling family of six</strong> living a resourceful, God-led life — and we make content straight from the middle of it all. From house-hacking Airbnbs and camper life to thrift hauls and real days with little ones underfoot, our world is full of honest, relatable moments.</p>
       <p>That's our superpower for brands: we don't do stiff and staged. We do <strong>raw, warm, and real</strong> — the kind of content people actually trust and act on. We're both natural on camera, so couple and family angles come easy too.</p>
       <p class="verse">"As for me and my house, we will serve the Lord." — Joshua 24:15</p>
@@ -360,10 +360,10 @@
       <p>Everything we make lives under one authentic identity — so our content always feels genuine, never salesy.</p>
     </div>
     <div class="pillars">
-      <div class="pillar"><span class="ico">✝️</span><h3>Faith &amp; family</h3><p>Prayer, God stories, and Jesus-first living — our heartbeat and the center of everything.</p></div>
-      <div class="pillar"><span class="ico">🏡</span><h3>Resourceful living</h3><p>Airbnb house-hacking, camper life, thrifting, and doing so much more with less.</p></div>
-      <div class="pillar"><span class="ico">📚</span><h3>Homeschool &amp; mom life</h3><p>Real, unfiltered days raising and teaching four kids — the joyful and the messy.</p></div>
-      <div class="pillar"><span class="ico">🌿</span><h3>Health &amp; self-care</h3><p>Simple wellness and taking care of ourselves so we can pour into our family.</p></div>
+      <div class="pillar"><h3>Faith &amp; family</h3><p>Prayer, God stories, and Jesus-first living — our heartbeat and the center of everything.</p></div>
+      <div class="pillar"><h3>Resourceful living</h3><p>Airbnb house-hacking, camper life, thrifting, and doing so much more with less.</p></div>
+      <div class="pillar"><h3>Homeschool &amp; mom life</h3><p>Real, unfiltered days raising and teaching four kids — the joyful and the messy.</p></div>
+      <div class="pillar"><h3>Health &amp; self-care</h3><p>Simple wellness and taking care of ourselves so we can pour into our family.</p></div>
     </div>
   </div>
 </section>
@@ -548,10 +548,10 @@
     <a href="contact.html" class="btn" style="margin-bottom:26px">Start a collab →</a>
     <p style="font-size:.95rem;margin-bottom:16px">Or email us anytime:</p>
     <div class="contact-emails">
-      <a href="mailto:hey@thecaldwellcreatives.com?subject=UGC%20Collaboration">✉️ hey@thecaldwellcreatives.com</a>
+      <a href="mailto:hey@thecaldwellcreatives.com?subject=UGC%20Collaboration">hey@thecaldwellcreatives.com</a>
     </div>
     <div class="socials">
-      <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener">📸 @heycaldwells</a>
+      <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener">@heycaldwells</a>
     </div>
   </div>
 </section>
