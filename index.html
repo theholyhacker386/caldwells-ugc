@@ -608,6 +608,14 @@
     v.addEventListener('pause', function(){ v.parentElement.classList.remove('playing'); });
     v.addEventListener('ended', function(){ v.parentElement.classList.remove('playing'); v.removeAttribute('controls'); });
   });
+  // whole tile is clickable to start playback; once controls are up, the browser's own bar takes over
+  document.querySelectorAll('.reel').forEach(function(card){
+    card.addEventListener('click', function(e){
+      if(e.target.closest('.play')) return;               // play button already handles itself
+      var v = card.querySelector('video');
+      if(v && !v.hasAttribute('controls')) playReel(card);
+    });
+  });
 
   // slide-up reveal: content rises gently into view as you scroll
   var riseEls = document.querySelectorAll('.hero-grid > *, section .wrap > :not(.reels):not(.create-grid), .reels > *, .create-grid > *, footer > *');
