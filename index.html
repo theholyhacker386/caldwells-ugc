@@ -120,6 +120,9 @@
   .mini .create-cell p{font-size:.8rem;line-height:1.45}
   .hero-caption{margin:26px auto 0;text-align:center;max-width:36ch;font-size:.98rem}
   @media(max-width:480px){.create-grid.mini{grid-template-columns:1fr 1fr}}
+  /* phone-only landing spot for the What We Create grid (after the videos) */
+  #create-slot-mobile{padding:0}
+  #create-slot-mobile:has(#create-block){padding:10px 0 36px}
 
   /* ---------- REELS ROW ---------- */
   .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -300,6 +303,7 @@
   <div class="wrap hero-grid">
     <div>
       <h1>Real life. Real content that <em>converts.</em></h1>
+      <div id="create-block">
       <div class="eyebrow" style="margin:4px 0 10px">What we create</div>
       <div class="create-grid mini">
         <div class="create-cell">
@@ -332,6 +336,7 @@
           <h3>Brand Collab Content</h3>
           <p>Thoughtful, on-brand content created in partnership to bring your vision to life.</p>
         </div>
+      </div>
       </div>
     </div>
     <div>
@@ -381,6 +386,9 @@
     </div>
   </div>
 </section>
+
+<!-- on phones, the What We Create grid lands here (after the videos) -->
+<section id="create-slot-mobile"><div class="wrap"></div></section>
 
 <!-- BRAND STRIP -->
 <div class="brandbar">
@@ -586,6 +594,17 @@
     v.addEventListener('pause', function(){ v.parentElement.classList.remove('playing'); });
     v.addEventListener('ended', function(){ v.parentElement.classList.remove('playing'); v.removeAttribute('controls'); });
   });
+  // on phones, the What We Create grid moves below the videos; on desktop it sits under the headline
+  var createBlock = document.getElementById('create-block');
+  var createHeroHome = createBlock.parentElement;
+  var createMobileSlot = document.querySelector('#create-slot-mobile .wrap');
+  function placeCreateBlock(){
+    var target = window.matchMedia('(max-width:820px)').matches ? createMobileSlot : createHeroHome;
+    if(createBlock.parentElement !== target) target.appendChild(createBlock);
+  }
+  placeCreateBlock();
+  window.addEventListener('resize', placeCreateBlock);
+
   // whole tile is clickable to start playback; once controls are up, the browser's own bar takes over
   document.querySelectorAll('.reel').forEach(function(card){
     card.addEventListener('click', function(e){
