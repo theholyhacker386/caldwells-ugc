@@ -57,7 +57,8 @@
     backdrop-filter:blur(10px);border-bottom:1px solid #000;
   }
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .logo{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:#fff}
+  .logo{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:#fff;line-height:1.05}
+  .logo .logo-sub{display:block;font-style:italic;font-weight:700;font-size:.82rem;color:#D8D2C8;letter-spacing:.03em}
   .logo span{color:#CFCCC6}
   .navlinks{display:flex;gap:30px;align-items:center}
   .navlinks a{font-size:1.02rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .2s}
@@ -125,11 +126,6 @@
   .mini .create-cell h3{font-size:.68rem;letter-spacing:.1em;margin-bottom:3px}
   .mini .create-cell p{font-size:.8rem;line-height:1.45}
   .hero-caption{margin:14px auto 0;text-align:center;max-width:36ch;font-size:.98rem}
-  /* "Creatives" wordmark under the family — same style as the contact page caption */
-  .figure-word{
-    margin-top:20px;text-align:center;font-family:var(--serif);font-style:italic;font-weight:700;
-    font-size:1.55rem;line-height:1.15;color:var(--ink);
-  }
   @media(max-width:480px){.create-grid.mini{grid-template-columns:1fr 1fr}}
   /* phone-only landing spot for the What We Create grid (after the videos) */
   #create-slot-mobile{padding:0}
@@ -351,7 +347,6 @@
       <div class="hero-figure">
         <img fetchpriority="high" src="assets/family-cutout.webp" alt="The Caldwell family standing together">
       </div>
-      <div class="figure-word">Creatives</div>
       <p class="lead hero-caption">We create authentic, scroll-stopping videos and photos that make your brand feel like a trusted friend's recommendation — because that's exactly what it is.</p>
     </div>
   </div>
