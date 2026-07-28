@@ -70,6 +70,17 @@
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
   .hero h1{font-size:clamp(2.8rem,6.6vw,4.9rem);font-weight:800;line-height:1.0;margin-bottom:22px}
   .hero h1 em{font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  /* name-style header */
+  .hero-name{margin-bottom:0}
+  .hero-name .the{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1;margin-bottom:2px;color:var(--clay)}
+  .hero-name .fam{display:block;font-size:clamp(3rem,7.4vw,5.6rem);font-weight:800;letter-spacing:.015em;line-height:1}
+  .hero-tagline{font-size:.92rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:14px 0 18px}
+  .hero-tagline span{color:var(--clay)}
+  .social-row{display:flex;gap:12px;margin-bottom:14px}
+  .social-row a{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;transition:transform .15s ease,background .2s ease}
+  .social-row a:hover{transform:translateY(-2px);background:var(--clay)}
+  .social-row svg{width:20px;height:20px}
+  .hero-contact{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.95rem;font-weight:500;color:var(--muted);margin-bottom:20px}
   .hero p.lead{font-size:1.12rem;color:var(--muted);max-width:34ch;margin-bottom:0}
   .hero-figure{position:relative;justify-self:center;width:min(300px,84%)}
   .hero-figure::before{
@@ -83,13 +94,6 @@
     background:radial-gradient(ellipse at center,rgba(26,26,24,.22),transparent 68%);
   }
   .hero-figure img{position:relative;z-index:1;width:100%;display:block;filter:drop-shadow(0 16px 26px rgba(26,26,24,.14))}
-  .hero-figure .badge{z-index:2;left:50%;bottom:-6px;transform:translateX(-50%);width:max-content;max-width:110%;text-align:center}
-  .badge{
-    position:absolute;bottom:16px;left:16px;background:rgba(255,255,255,.92);
-    backdrop-filter:blur(4px);border-radius:14px;padding:10px 16px;font-size:.82rem;
-    font-weight:600;color:var(--ink);box-shadow:0 8px 24px -12px rgba(0,0,0,.3);
-  }
-  .badge span{color:var(--sage)}
   @media(max-width:820px){
     .hero-grid{grid-template-columns:1fr;gap:40px}
     .hero-figure{max-width:300px;margin:0 auto}
@@ -288,7 +292,17 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Real life. Real content that <em>converts.</em></h1>
+      <h1 class="hero-name"><span class="the">the</span><span class="fam">CALDWELLS</span></h1>
+      <div class="hero-tagline">Family UGC <span>|</span> Content that converts</div>
+      <div class="social-row">
+        <a href="https://www.tiktok.com/@heycaldwells" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4c.6 2.2 2.5 4.2 5 4.5"/></svg></a>
+        <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+        <a href="mailto:hello@thecaldwellcreatives.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
+      </div>
+      <div class="hero-contact">
+        <span>✉ hello@thecaldwellcreatives.com</span>
+        <span>📍 Daytona Beach, Florida</span>
+      </div>
       <div id="create-block">
       <div class="eyebrow" style="margin:4px 0 10px">What we create</div>
       <div class="create-grid mini">
@@ -328,12 +342,25 @@
     <div>
       <div class="hero-figure">
         <img fetchpriority="high" src="assets/family-cutout.webp" alt="The Caldwell family standing together">
-        <div class="badge">Based in Florida · <span>Content that feels like home</span></div>
       </div>
       <p class="lead hero-caption">We create authentic, scroll-stopping videos and photos that make your brand feel like a trusted friend's recommendation — because that's exactly what it is.</p>
     </div>
   </div>
 </header>
+
+<!-- BRAND STRIP -->
+<div class="brandbar">
+  <div class="inner">
+    <span class="lbl">Brands we've created content for</span>
+    <span class="names">
+      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-terra.webp" alt="Terra by Battat"></span>
+      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-naked.webp" alt="Naked Nutrition"></span>
+      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-zevia.webp" alt="Zevia"></span>
+      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-porch.webp" alt="The Porch Health Bar"></span>
+      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-threebrothers.webp" alt="Three Brothers Boards"></span>
+    </span>
+  </div>
+</div>
 
 <!-- REELS ROW -->
 <section id="work" style="padding:0 0 20px">
@@ -376,19 +403,7 @@
 <!-- on phones, the What We Create grid lands here (after the videos) -->
 <section id="create-slot-mobile"><div class="wrap"></div></section>
 
-<!-- BRAND STRIP -->
-<div class="brandbar">
-  <div class="inner">
-    <span class="lbl">Brands we've created content for</span>
-    <span class="names">
-      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-terra.webp" alt="Terra by Battat"></span>
-      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-naked.webp" alt="Naked Nutrition"></span>
-      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-zevia.webp" alt="Zevia"></span>
-      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-porch.webp" alt="The Porch Health Bar"></span>
-      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-threebrothers.webp" alt="Three Brothers Boards"></span>
-    </span>
-  </div>
-</div>
+
 
 <!-- ABOUT -->
 <section id="about">
