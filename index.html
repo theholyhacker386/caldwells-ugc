@@ -75,6 +75,13 @@
   .social-row a{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;transition:transform .15s ease,background .2s ease}
   .social-row a:hover{transform:translateY(-2px);background:var(--clay)}
   .social-row svg{width:20px;height:20px}
+  .hero-contact{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.95rem;font-weight:500;color:var(--muted);margin:0 0 16px}
+  /* gray title bar centered atop the What We Create grid */
+  .create-head{
+    background:rgba(58,55,51,1);color:#fff;text-align:center;
+    font-family:var(--serif);font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    font-size:.85rem;padding:11px 12px;
+  }
   .hero-figure{position:relative;justify-self:center;width:min(300px,84%)}
   .hero-figure::before{
     content:'';position:absolute;left:50%;top:4%;transform:translateX(-50%);
@@ -298,8 +305,12 @@
         <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
         <a href="mailto:hello@thecaldwellcreatives.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
       </div>
+      <div class="hero-contact">
+        <span>✉ hello@thecaldwellcreatives.com</span>
+        <span>📍 Daytona Beach, Florida</span>
+      </div>
       <div id="create-block">
-      <div class="eyebrow" style="margin:4px 0 10px">What we create</div>
+      <div class="create-head">What We Create</div>
       <div class="create-grid mini">
         <div class="create-cell">
           <div class="create-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
