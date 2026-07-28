@@ -120,12 +120,11 @@
   @media(max-width:480px){.create-grid{grid-template-columns:1fr}}
   /* compact version that sits under the hero headline */
   .create-grid.mini{grid-template-columns:1fr 1fr;margin-top:4px}
-  .mini .create-cell{padding:15px 15px}
-  .mini .create-icon{width:36px;height:36px;margin-bottom:8px}
-  .mini .create-icon svg{width:17px;height:17px}
-  .mini .create-cell h3{font-size:.68rem;letter-spacing:.1em;margin-bottom:3px}
-  .mini .create-cell p{font-size:.8rem;line-height:1.45}
-  .hero-caption{margin:14px auto 0;text-align:center;max-width:36ch;font-size:.98rem}
+  .mini .create-cell{padding:11px 13px;display:grid;grid-template-columns:34px 1fr;column-gap:11px;align-items:start}
+  .mini .create-icon{width:34px;height:34px;margin-bottom:0;grid-row:1/span 2;margin-top:2px}
+  .mini .create-icon svg{width:16px;height:16px}
+  .mini .create-cell h3{font-size:.68rem;letter-spacing:.1em;margin-bottom:2px}
+  .mini .create-cell p{font-size:.78rem;line-height:1.4}
   @media(max-width:480px){.create-grid.mini{grid-template-columns:1fr 1fr}}
   /* phone-only landing spot for the What We Create grid (after the videos) */
   #create-slot-mobile{padding:0}
@@ -347,7 +346,6 @@
       <div class="hero-figure">
         <img fetchpriority="high" src="assets/family-cutout.webp" alt="The Caldwell family standing together">
       </div>
-      <p class="lead hero-caption">We create authentic, scroll-stopping videos and photos that make your brand feel like a trusted friend's recommendation — because that's exactly what it is.</p>
     </div>
   </div>
 </header>
