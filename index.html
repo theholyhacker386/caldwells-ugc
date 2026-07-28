@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FCFCFA;       /* clean white background */
-    --cream-2:#F3F4F1;     /* soft gray alt sections */
+    --cream:#FDFBF7;       /* clean white background */
+    --cream-2:#F6F0E6;     /* soft gray alt sections */
     --card:#FFFFFF;
     --ink:#1A1A18;         /* black text */
     --muted:#6E6E68;       /* neutral gray */
-    --clay:#514E49;        /* moss green accent */
-    --clay-dark:#35332F;
-    --sage:#8B8880;        /* soft sage secondary */
-    --gold:#EDEFE8;        /* light accent for dark green blocks */
-    --line:#E6E6E2;        /* light hairline */
-    --grad:linear-gradient(120deg,#514E49 0%,#2F2D2A 100%);
+    --clay:#B08850;        /* moss green accent */
+    --clay-dark:#8A6636;
+    --sage:#C8A878;        /* soft sage secondary */
+    --gold:#F3E9DA;        /* light accent for dark green blocks */
+    --line:#EAE1D2;        /* light hairline */
+    --grad:linear-gradient(120deg,#BC9159 0%,#8A6636 100%);
     --serif:'Archivo', 'Helvetica Neue', Arial, sans-serif;
     --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
@@ -53,8 +53,8 @@
 
   /* ---------- NAV ---------- */
   nav{
-    position:sticky;top:0;z-index:50;background:rgba(58,55,51,.97);
-    backdrop-filter:blur(10px);border-bottom:1px solid #2E2C29;
+    position:sticky;top:0;z-index:50;background:rgba(15,14,13,.97);
+    backdrop-filter:blur(10px);border-bottom:1px solid #000;
   }
   nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
   .logo{font-family:var(--serif);font-size:1.25rem;font-weight:600;color:#fff}
@@ -80,7 +80,7 @@
   .hero-contact a:hover{color:var(--ink);text-decoration:underline}
   /* gray title bar centered atop the What We Create grid */
   .create-head{
-    background:rgba(58,55,51,1);color:#fff;text-align:center;
+    background:#141312;color:#fff;text-align:center;
     font-family:var(--serif);font-weight:700;letter-spacing:.16em;text-transform:uppercase;
     font-size:.85rem;padding:11px 12px;
   }
@@ -88,7 +88,7 @@
   .hero-figure::before{
     content:'';position:absolute;left:50%;top:4%;transform:translateX(-50%);
     width:120%;aspect-ratio:1;border-radius:50%;
-    background:radial-gradient(circle at 50% 42%,rgba(139,136,128,.34),rgba(139,136,128,.12) 55%,transparent 72%);
+    background:radial-gradient(circle at 50% 42%,rgba(193,154,107,.34),rgba(193,154,107,.12) 55%,transparent 72%);
   }
   .hero-figure::after{
     content:'';position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);
@@ -111,7 +111,7 @@
   /* ---------- WHAT WE CREATE GRID ---------- */
   .create-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
   .create-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 26px;background:var(--card)}
-  .create-icon{width:54px;height:54px;border-radius:50%;background:rgba(139,136,128,.16);display:flex;align-items:center;justify-content:center;color:var(--ink);margin-bottom:14px}
+  .create-icon{width:54px;height:54px;border-radius:50%;background:rgba(193,154,107,.16);display:flex;align-items:center;justify-content:center;color:var(--ink);margin-bottom:14px}
   .create-icon svg{width:26px;height:26px}
   .create-cell h3{font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
   .create-cell p{font-size:.92rem;color:var(--muted);line-height:1.55}
@@ -165,6 +165,8 @@
   }
   @media(max-width:820px){.reels{grid-template-columns:1fr 1fr;gap:8px}}
   @media(max-width:480px){.reels{grid-template-columns:1fr 1fr;gap:12px}.reel .play{width:48px;height:48px}}
+  /* kids row: centered, grows as more kid videos are added */
+  .reels.kids{grid-template-columns:repeat(auto-fit,minmax(240px,330px));justify-content:center}
 
   /* ---------- BRAND STRIP ---------- */
   .brandbar{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px}
@@ -381,6 +383,23 @@
       <div class="reel has-title">
         <video src="assets/reel-3.mp4" poster="assets/reel-3-poster.webp" playsinline preload="none" controlslist="noplaybackrate nodownload noremoteplayback" disableremoteplayback disablepictureinpicture></video>
         <span class="reel-title">Toy<br>UGC</span>
+        <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIDS UGC -->
+<section style="padding:30px 0 10px">
+  <div class="wrap">
+    <div class="sec-head" style="margin:0 auto 24px;text-align:center">
+      <div class="eyebrow">Little voices, big trust</div>
+      <h2>Kids UGC</h2>
+    </div>
+    <div class="reels kids">
+      <div class="reel has-title">
+        <video src="assets/reel-7.mp4" poster="assets/reel-7-poster.webp" playsinline preload="none" controlslist="noplaybackrate nodownload noremoteplayback" disableremoteplayback disablepictureinpicture></video>
+        <span class="reel-title">Snack<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
     </div>
