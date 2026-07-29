@@ -46,10 +46,9 @@
   .navlinks .btn{color:#fff}
   @media(max-width:760px){.navlinks a:not(.btn):not(.nav-social){display:none}}
   /* phone-only: socials live in the black bar, inverted */
-  .nav-social{display:none;width:34px;height:34px;border-radius:50%;background:#fff;color:#141312;align-items:center;justify-content:center}
+  .nav-social{display:flex;width:34px;height:34px;border-radius:50%;background:#fff;color:#141312;align-items:center;justify-content:center}
   .nav-social svg{width:16px;height:16px}
   @media(max-width:760px){
-    .nav-social{display:flex}
     .navlinks{gap:12px}
     .navlinks .btn{padding:9px 16px;font-size:.82rem}
   }
@@ -127,6 +126,7 @@
       <a href="index.html#what-is-ugc">What is UGC?</a>
       <a class="nav-social" href="https://www.tiktok.com/@heycaldwells" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4c.6 2.2 2.5 4.2 5 4.5"/></svg></a>
       <a class="nav-social" href="https://instagram.com/heycaldwells" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+      <a class="nav-social copy-email" href="mailto:hey@thecaldwellcreatives.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg></a>
       <a href="contact.html" class="btn">Let's collab</a>
     </div>
   </div>
@@ -214,5 +214,17 @@
   });
 </script>
 
+<script>
+  document.querySelectorAll('.copy-email').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      navigator.clipboard.writeText('hey@thecaldwellcreatives.com').then(function(){
+        var old = el.innerHTML;
+        el.innerHTML = el.classList.contains('nav-social') ? '✓' : '✓ Copied!';
+        setTimeout(function(){ el.innerHTML = old; }, 1600);
+      });
+    });
+  });
+</script>
 </body>
 </html>
