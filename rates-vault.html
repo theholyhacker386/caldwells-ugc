@@ -50,7 +50,9 @@
 
   .fine{font-size:.85rem;color:var(--muted);text-align:center;padding:0 0 24px}
   .cta{text-align:center;padding:6px 0 56px}
-  .cta a{display:inline-block;background:var(--grad);color:#fff;font-weight:600;font-size:.95rem;padding:14px 28px;border-radius:100px}
+  .cta a{display:inline-block;background:var(--grad);color:#fff;font-weight:600;font-size:.95rem;padding:14px 28px;border-radius:100px;margin:0 6px 10px}
+  .cta a.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .cta a.ghost:hover{border-color:var(--clay);color:var(--clay)}
   @media(max-width:480px){.row{flex-direction:column;gap:2px}.row .price{font-size:1.05rem}}
 </style>
 <script>
@@ -63,7 +65,7 @@
 
 <div class="bar">
   <div class="wrap">
-    <div class="logo">The Caldwells<span>.</span><em>Creatives</em></div>
+    <a href="index.html" class="logo">The Caldwells<span>.</span><em>Creatives</em></a>
     <div class="tag">Rate Card</div>
   </div>
 </div>
@@ -109,7 +111,10 @@
 
   <div class="fine">50% due to begin, balance on delivery · 1–2 revision rounds included · rates current as of summer 2026 and subject to update</div>
 
-  <div class="cta"><a href="mailto:hey@thecaldwellcreatives.com?subject=Let's%20work%20together">Let's build your package →</a></div>
+  <div class="cta">
+    <a href="contact.html">Let's build your package →</a>
+    <a class="ghost" href="index.html">See our work first</a>
+  </div>
 
 </div>
 
