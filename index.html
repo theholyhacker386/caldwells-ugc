@@ -120,7 +120,7 @@
   }
 
   /* ---------- SLIDE-UP REVEAL ---------- */
-  .rise{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+  .rise{opacity:0;transform:translateY(22px);transition:opacity .45s ease,transform .45s ease}
   .rise.rise-in{opacity:1;transform:none}
   @media (prefers-reduced-motion: reduce){
     .rise{opacity:1;transform:none;transition:none}
@@ -626,11 +626,11 @@
   });
 
   // slide-up reveal: content rises gently into view as you scroll
-  var riseEls = document.querySelectorAll('.hero-grid > *, section .wrap > :not(.reels):not(.create-grid), .reels > *, .create-grid > *, footer > *');
+  var riseEls = document.querySelectorAll('.hero-grid > *, section .wrap > :not(.reels):not(.create-grid), .create-grid > *, footer > *');
   riseEls.forEach(function(el){
     el.classList.add('rise');
     var i = Array.prototype.indexOf.call(el.parentElement.children, el);
-    el.style.transitionDelay = Math.min(i * 90, 360) + 'ms';
+    el.style.transitionDelay = Math.min(i * 60, 180) + 'ms';
   });
   var riseObserver = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
