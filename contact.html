@@ -47,9 +47,10 @@
   @media(max-width:760px){.navlinks a:not(.btn):not(.nav-social){display:none}}
   /* phone-only: socials live in the black bar, inverted */
   .nav-left{display:flex;align-items:center;gap:12px}
-  .navlinks a.nav-social, .nav-left a.nav-social{color:#141312}
-  .nav-social{display:flex;width:34px;height:34px;border-radius:50%;background:#fff;color:#141312;align-items:center;justify-content:center}
-  .nav-social svg{width:16px;height:16px}
+  .navlinks a.nav-social, .nav-left a.nav-social{color:#fff}
+  .nav-social{display:flex;width:37px;height:37px;border-radius:50%;background:var(--grad);color:#fff;align-items:center;justify-content:center;box-shadow:0 5px 14px -5px rgba(188,145,89,.65);transition:transform .15s ease,filter .2s ease}
+  .nav-social:hover{transform:translateY(-2px);filter:brightness(1.12)}
+  .nav-social svg{width:17px;height:17px}
   @media(max-width:760px){
     .navlinks{gap:12px}
     .navlinks .btn{padding:9px 16px;font-size:.82rem}
