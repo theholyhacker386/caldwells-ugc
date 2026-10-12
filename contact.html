@@ -160,10 +160,10 @@
       <div class="photo-caption">Let's get creative.</div>
     </div>
     <h2>Say hello</h2>
-    <p>Two easy ways to reach us — <strong>book a quick call</strong>, or fill out the form. Whatever's easiest for you.</p>
-    <a href="mailto:hey@thecaldwellcreatives.com?subject=I'd%20like%20to%20book%20a%20call" class="btn" style="margin:2px 0 18px">Book a 15-min call</a>
+    <p>Tell us about your project below and we'll get right back to you. Want to talk it through instead? Say so in the form and we'll set up a quick call.</p>
+    <a href="#cform" class="btn book-call" style="margin:2px 0 18px">Book a 15-min call</a>
     <div class="cmethods">
-      <a href="mailto:hey@thecaldwellcreatives.com">hey@thecaldwellcreatives.com</a>
+      <a class="copy-email" href="mailto:hey@thecaldwellcreatives.com">hey@thecaldwellcreatives.com</a>
       <a href="https://instagram.com/heycaldwells" target="_blank" rel="noopener">@heycaldwells</a>
     </div>
   </div>
@@ -190,6 +190,7 @@
           </select>
         </div>
       </div>
+      <div class="field"><label>Prefer a quick call? Best days/times for you <span style="font-weight:400;opacity:.6">(optional)</span></label><input type="text" name="calltime" id="calltime" placeholder="e.g. Tue or Wed mornings, Eastern"></div>
       <div class="field"><label>Tell us about your brand &amp; project</label><textarea name="message" required placeholder="What are you launching? What products? Any timeline or budget in mind?"></textarea></div>
       <button type="submit" class="btn">Send it our way</button>
       <div class="formnote">We'll never share your info. Real humans read every message.</div>
@@ -209,6 +210,21 @@
     </div>
   <div>UGC Creator · Faith-first content that converts</div>
 </footer>
+
+<script>
+  // "Book a 15-min call" scrolls to the form and focuses the call-time field
+  document.querySelectorAll('.book-call').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.getElementById('cform');
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      setTimeout(function(){
+        var t = document.getElementById('calltime');
+        if(t) t.focus({preventScroll:true});
+      }, 450);
+    });
+  });
+</script>
 
 <script>
   var form = document.getElementById('collabForm');
