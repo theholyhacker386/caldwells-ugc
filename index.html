@@ -187,12 +187,26 @@
   .brandbar{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:13px 24px}
   .brandbar .inner{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 34px;text-align:center}
   .brandbar .lbl{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-  .brandbar .names{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px}
+  .brandbar .names{display:flex;align-items:center;justify-content:center;max-width:100%;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+  .brandbar .names::-webkit-scrollbar{display:none}
+  .brandbar .track{display:flex;flex-wrap:nowrap;align-items:center;gap:12px;width:max-content;margin:0 auto}
+  /* auto-scroll: switched on by JS only when the logos no longer fit */
+  .brandbar .names.scrolling{overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 44px,#000 calc(100% - 44px),transparent 100%);
+            mask-image:linear-gradient(90deg,transparent 0,#000 44px,#000 calc(100% - 44px),transparent 100%)}
+  .brandbar .names.scrolling .track{margin:0;animation:brandmarquee var(--marquee-dur,60s) linear infinite}
+  .brandbar .names.scrolling:hover .track,
+  .brandbar .names.scrolling:focus-within .track{animation-play-state:paused}
+  @keyframes brandmarquee{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}
+  @media(prefers-reduced-motion:reduce){
+    .brandbar .names.scrolling{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+    .brandbar .names.scrolling .track{animation:none}
+  }
   .brandbar .logo-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 14px;height:52px;display:flex;align-items:center;justify-content:center}
   .brandbar .logo-card img{max-height:32px;max-width:120px;width:auto;object-fit:contain;display:block}
   .brandbar .logo-card.dark{background:#0D0D0D;border-color:#0D0D0D}
   .brandbar .logo-card.dark img{max-height:40px}
-  @media(max-width:600px){.brandbar .inner{flex-direction:column;gap:10px}.brandbar .names{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;max-width:100%;-webkit-overflow-scrolling:touch;padding:2px 2px 6px}}
+  @media(max-width:600px){.brandbar .inner{flex-direction:column;gap:10px}.brandbar .names{justify-content:flex-start;-webkit-overflow-scrolling:touch;padding:2px 0 6px}}
 
   /* ---------- PACKAGES ---------- */
   .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
@@ -355,13 +369,18 @@
 <div class="brandbar">
   <div class="inner">
     <span class="lbl">Brands we've created content for</span>
-    <span class="names">
-      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-aquajourneys.webp" alt="Aqua Journeys Swim School"></span>
-      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-makewellness.webp" alt="Make Wellness"></span>
-      <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-zevia.webp" alt="Zevia"></span>
-      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-porch.webp" alt="The Porch Health Bar"></span>
-      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-threebrothers.webp" alt="Three Brothers Boards"></span>
-      <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-vinechurch.webp" alt="The Vine Church"></span>
+    <span class="names" id="brandNames">
+      <span class="track" id="brandTrack">
+        <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-frida.webp" alt="Frida Baby"></span>
+        <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-kinedu.webp" alt="Kinedu"></span>
+        <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-glutenfreepalace.webp" alt="The Gluten Free Palace"></span>
+        <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-aquajourneys.webp" alt="Aqua Journeys Swim School"></span>
+        <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-makewellness.webp" alt="Make Wellness"></span>
+        <span class="logo-card"><img loading="lazy" decoding="async" src="assets/logo-zevia.webp" alt="Zevia"></span>
+        <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-porch.webp" alt="The Porch Health Bar"></span>
+        <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-threebrothers.webp" alt="Three Brothers Boards"></span>
+        <span class="logo-card dark"><img loading="lazy" decoding="async" src="assets/logo-vinechurch.webp" alt="The Vine Church"></span>
+      </span>
     </span>
   </div>
 </div>
@@ -396,11 +415,6 @@
         <button class="play" onclick="playReel(this.parentElement)" aria-label="Play video"></button>
       </div>
       <div class="reel has-title">
-        <video src="assets/reel-4.mp4" poster="assets/reel-4-poster.webp" playsinline preload="none" controlslist="noplaybackrate nodownload noremoteplayback" disableremoteplayback disablepictureinpicture></video>
-        <span class="reel-title">Protein<br>UGC</span>
-        <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
-      </div>
-      <div class="reel has-title">
         <video src="assets/reel-9.mp4" poster="assets/reel-9-poster.webp" playsinline preload="none" controlslist="noplaybackrate nodownload noremoteplayback" disableremoteplayback disablepictureinpicture></video>
         <span class="reel-title">Fishing<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
@@ -432,6 +446,11 @@
       <div class="reel has-title">
         <video src="assets/reel-13.mp4" poster="assets/reel-13-poster.webp" playsinline preload="none" controlslist="noplaybackrate nodownload noremoteplayback" disableremoteplayback disablepictureinpicture></video>
         <span class="reel-title">Baby App<br>UGC</span>
+        <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
+      </div>
+      <div class="reel has-title">
+        <video src="assets/reel-4.mp4" poster="assets/reel-4-poster.webp" playsinline preload="none" controlslist="noplaybackrate nodownload noremoteplayback" disableremoteplayback disablepictureinpicture></video>
+        <span class="reel-title">Protein<br>UGC</span>
         <button class="play" aria-label="Play video" onclick="playReel(this.parentElement)"></button>
       </div>
     </div>
@@ -660,6 +679,39 @@
     });
   }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
   riseEls.forEach(function(el){ riseObserver.observe(el); });
+
+  // ---- Brand strip: slowly auto-scroll, but ONLY once the logos stop fitting ----
+  (function(){
+    var names = document.getElementById('brandNames');
+    var track = document.getElementById('brandTrack');
+    if(!names || !track) return;
+    var originals = Array.prototype.slice.call(track.children);
+
+    function setup(){
+      names.classList.remove('scrolling');
+      track.querySelectorAll('[data-clone]').forEach(function(n){ n.remove(); });
+
+      // Does one full set still fit? If so, leave it as a static centred row.
+      if(track.scrollWidth <= names.clientWidth + 1) return;
+
+      // Duplicate the set so the loop can wrap around with no visible seam.
+      originals.forEach(function(n){
+        var c = n.cloneNode(true);
+        c.setAttribute('data-clone','');
+        c.setAttribute('aria-hidden','true');
+        track.appendChild(c);
+      });
+
+      // Constant speed (~22px/sec) so adding brands makes it longer, not faster.
+      var secs = Math.round((track.scrollWidth / 2) / 22);
+      names.style.setProperty('--marquee-dur', Math.max(30, secs) + 's');
+      names.classList.add('scrolling');
+    }
+
+    setup();
+    window.addEventListener('load', setup);          // re-measure once logos have decoded
+    var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(setup, 200); });
+  })();
 </script>
 
 </body>
